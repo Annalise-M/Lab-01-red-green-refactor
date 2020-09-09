@@ -23,3 +23,13 @@ describe('copyAndPush function', () => {
   });
 });
 
+describe('copyAndPush non-mutating function', () => {
+  it('should leave original array un-mutated', () => {
+    const numbers = [1, 2, 3];
+    const newNumbers = copyAndPush(numbers, 4);
+
+    expect(newNumbers).toEqual([1, 2, 3, 4]);
+    expect(numbers).toEqual([1, 2, 3]);
+  });
+});
+
