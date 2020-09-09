@@ -1,5 +1,7 @@
-// get name function here
+// const fetch = require('node-fetch');
 
+
+const getName = ({ name }) => name;
 
 
 
@@ -15,4 +17,6 @@
 
 
 
-
+module.exports = {
+  getName
+};
