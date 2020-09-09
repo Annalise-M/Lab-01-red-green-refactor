@@ -9,9 +9,12 @@ const copyAndPush = (array, item) => {
   return copy;
 };
 
-
 // capitalizeAndFilter
-
+const capitalizeAndFilter = (strings) => {
+  const newString = strings.filter(string => string.charAt(0) !== 'f');
+  const capitalized = newString.map(string => string.toUpperCase());
+  return capitalized;
+}
 
 
 // fetchQuotes
@@ -20,5 +23,6 @@ const copyAndPush = (array, item) => {
 
 module.exports = {
   getName,
-  copyAndPush
+  copyAndPush,
+  capitalizeAndFilter
 };

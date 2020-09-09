@@ -1,6 +1,7 @@
 const { 
   getName,
   copyAndPush,
+  capitalizeAndFilter,
   fetchQuote
 } = require('./functions.js');
 
@@ -33,3 +34,11 @@ describe('copyAndPush non-mutating function', () => {
   });
 });
 
+describe('capitalizeAndFilter function', () => {
+  it('filters letter f, while capitalizing all strings', () => {
+    const strings = ['make', 'this', 'uppercase', 'for-real'];
+    const result = capitalizeAndFilter(strings);
+
+    expect(result).toEqual(['MAKE', 'THIS', 'UPPERCASE']);
+  });
+});
