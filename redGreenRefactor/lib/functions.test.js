@@ -42,3 +42,16 @@ describe('capitalizeAndFilter function', () => {
     expect(result).toEqual(['MAKE', 'THIS', 'UPPERCASE']);
   });
 });
+
+
+describe('fetchQuote function', () => {
+  it('fetches quote from futurama api', async() => {
+    const object = await fetchQuote();
+    
+    expect(object).toMatchObject({
+      image: expect.any(String),
+      name: expect.any(String),
+      text: expect.any(String)
+    });
+  });
+});
