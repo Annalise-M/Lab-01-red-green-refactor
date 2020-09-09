@@ -3,10 +3,11 @@
 
 const getName = ({ name }) => name;
 
-
-
 // copyAndPush function
-
+const copyAndPush = (array, item) => {
+  const copy = [...array, item];
+  return copy;
+};
 
 
 // capitalizeAndFilter
@@ -18,5 +19,6 @@ const getName = ({ name }) => name;
 
 
 module.exports = {
-  getName
+  getName,
+  copyAndPush
 };
